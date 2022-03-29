@@ -30,7 +30,7 @@ The HTML is pretty simple in this app, so we won't go through it here; there are
 
 ### Keeping the interface constrained to the viewport, regardless of device height, with calc()
 
-The {{cssxref("calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.
+The {{cssxref("calc", "calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.
 
 For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:
 
@@ -176,7 +176,7 @@ record.onclick = function() {
 
 When the `MediaRecorder` is recording, the {{domxref("MediaRecorder.state")}} property will return a value of "recording".
 
-As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.ondataavailable")}}:
+As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.dataavailable_event", "ondataavailable")}}:
 
 ```js
 let chunks = [];
@@ -204,7 +204,7 @@ Note that the recording may also stop naturally if the media stream ends (e.g. i
 
 ## Grabbing and using the blob
 
-When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.onstop")}}, and finalize our blob there from all the chunks we have received:
+When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.stop_event", "onstop")}}, and finalize our blob there from all the chunks we have received:
 
 ```js
 mediaRecorder.onstop = function(e) {

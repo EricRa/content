@@ -162,8 +162,8 @@ So, you've got your message strings set up, and your manifest. Now you just need
 In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
 ```js
-var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);
+let title = browser.i18n.getMessage("notificationTitle");
+let content = browser.i18n.getMessage("notificationContent", message.url);
 ```
 
 The first one just retrieves the `notificationTitle message` field from the available `messages.json` file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the `$URL$` placeholder we see in the `notificationContent message` field:
@@ -268,7 +268,7 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 ## Predefined messages
 
-The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Calling message strings from manifests and extension CSS](#calling_message_strings_from_manifests_and_extension_css). For example:
+The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Retrieving localized strings in manifests](#retrieving_localized_strings_in_manifests) and [Locale-dependent CSS](#locale-dependent_css). For example:
 
 ```
 __MSG_extensionName__
@@ -282,7 +282,7 @@ __MSG_@@ui_locale__
 
 The following table shows the different available predefined messages:
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Message name</th>

@@ -177,8 +177,8 @@ using one.
 
 ```js
 let stringArray = ['Blue', 'Humpback', 'Beluga'];
-let numericStringArray = ['80', '9', '700'];
 let numberArray = [40, 1, 5, 200];
+let numericStringArray = ['80', '9', '700'];
 let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
@@ -193,8 +193,8 @@ numberArray.sort(); // [1, 200, 40, 5]
 numberArray.sort(compareNumbers); // [1, 5, 40, 200]
 
 numericStringArray.join(); // '80,9,700'
-numericStringArray.sort(); // [700, 80, 9]
-numericStringArray.sort(compareNumbers); // [9, 80, 700]
+numericStringArray.sort(); // ['700', '80', '9']
+numericStringArray.sort(compareNumbers); // ['9', '80', '700']
 
 mixedNumericArray.join(); // '80,9,700,40,1,5,200'
 mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
@@ -222,7 +222,7 @@ items.sort(function (a, b) {
 The `compareFunction` can be invoked multiple times per element within the
 array. Depending on the `compareFunction`'s nature, this may yield a high
 overhead. The more work a `compareFunction` does and the more elements there
-are to sort, it may be more efficient to use [map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
+are to sort, it may be more efficient to use [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
 sorting. The idea is to traverse the array once to extract the actual values used for
 sorting into a temporary array, sort the temporary array, and then traverse the
 temporary array to achieve the right order.
@@ -310,7 +310,6 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used
-  by V8 engine](https://v8.dev/blog/array-sort)
+- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
 - [V8 sort stability](https://v8.dev/features/stable-sort)
 - [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)

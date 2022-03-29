@@ -96,7 +96,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 On Windows 7, the resulting progress looks like this:
 
-![progress-firefox.JPG](progress-firefox.jpg)
+![progress-firefox.JPG](Windows 7 progress bar screenshot. A rectangular gray bar with progress shown in green.)
   
 ## Accessibility Concerns
   
@@ -119,7 +119,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria_busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Example
 

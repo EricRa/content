@@ -39,6 +39,10 @@ browser-compat: html.elements.input.input-hidden
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>None.</td>
     </tr>
@@ -155,7 +159,7 @@ The output looks like this:
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **Note:** You can also find the example on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+> **Note:** You can also find the example on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
 
 When submitted, the form data sent to the server will look something like this:
 
